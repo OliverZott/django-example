@@ -1,0 +1,3 @@
+# https://djangowaves.com/tips-tricks/gitignore-for-a-django-project/
+# https://github.com/github/gitignore/blob/main/Python.gitignore
+venv
