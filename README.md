@@ -33,3 +33,17 @@ python -m venv venv
 .\venv\Scripts\activate
 pip install --upgrade -r ./requirements.txt
 ```
+
+## Dev steps
+
+1. user Authentication
+
+### User Authentication
+
+- Create UserModel and UserModelManager for django cli
+- Configure django to use it instead of default provided by django
+- DB Migration - create and migrate
+    - `python .\manage.py makemigrations profiles_api`
+    - `python .\manage.py migrate`
+- [django docu](https://docs.djangoproject.com/en/4.1/topics/auth/)
+- [django docu](https://docs.djangoproject.com/en/4.1/topics/auth/customizing/)
