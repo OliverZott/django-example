@@ -37,6 +37,8 @@ pip install --upgrade -r ./requirements.txt
 ## Dev steps
 
 1. user Authentication
+    1. create superuser
+2.
 
 ### User Authentication
 
@@ -47,3 +49,10 @@ pip install --upgrade -r ./requirements.txt
     - `python .\manage.py migrate`
 - [django docu](https://docs.djangoproject.com/en/4.1/topics/auth/)
 - [django docu](https://docs.djangoproject.com/en/4.1/topics/auth/customizing/)
+
+Register custom user model to django admin-site, create superuser via CLI and user django admin on the server.
+
+- dummy **superuser@mail.com** with standard pw
+- `python .\manage.py createsuperuser`
+- `python .\manage.py runserver`
+    - `http://127.0.0.1:8000/admin`
