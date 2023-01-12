@@ -52,7 +52,12 @@ pip install --upgrade -r ./requirements.txt
 
 Register custom user model to django admin-site, create superuser via CLI and user django admin on the server.
 
-- dummy **superuser@mail.com** with standard pw
+- Dummy user - user: **superuser@mail.com** pw: password
 - `python .\manage.py createsuperuser`
 - `python .\manage.py runserver`
     - `http://127.0.0.1:8000/admin`
+
+### API Views
+
+- `views.py` and `urls.py`
+- urls.py from project get forwarded to urls.py from app
