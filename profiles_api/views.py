@@ -1,9 +1,13 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import status
+
+from profiles_api import serializers
 
 
 class HelloApiView(APIView):
     """Hello Api View"""
+    serializer_class = serializers.HelloSerializer
 
     def get(self, request, format=None):
         """Returns list of Api View features"""
@@ -16,3 +20,30 @@ class HelloApiView(APIView):
 
         return Response(
             {'message': 'Hello :)', 'api_features': features})  # gets dict or list (to be able to serialize as json)
+
+    def post(self, request):
+        """Create hello message with given name"""
+        serializer = self.serializer_class(data=request.data)
+
+        if serializer.is_valid():
+            name: str = serializer.validated_data.get('name')
+            message: str = f'Hello {name}'
+            return Response({'message': message})
+        else:
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def put(self, request, pk=None):  # pk ... primary key
+        """Handle updating an object"""
+        return Response({'method': 'PUT'})
+
+    def patch(self, request, pk=None):
+        """Handle a partial update of a object
+        Only updates given fields... Put will overwrite all others with empty strings as well"""
+        return Response({'method': 'PATCH'})
+
+    def delete(self, request, pk=None):
+        """Deleting an object"""
+        return Response({'method': 'DELETE'})
