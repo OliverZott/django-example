@@ -88,3 +88,9 @@ ViewSet > API Views if:
 - quick and simple api
 - little to no customization in logic!
 - api working with standard data structures
+
+## User Profile Endpoint
+
+1. Create Serializer
+    - **ModelSerializer** specific for django database models
+1. 
