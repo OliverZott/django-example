@@ -91,6 +91,17 @@ ViewSet > API Views if:
 
 ## User Profile Endpoint
 
-1. Create Serializer
+- http://127.0.0.1:8000/api/profile_viewset/
+- `viewsets.ModelViewSet`
+
+1. Serializer
     - **ModelSerializer** specific for django database models
-1. 
+2. View with QuerySet
+3. Permissions and Authentication
+4. Filter (for searching)
+
+## Authentication and Login
+
+- http://127.0.0.1:8000/api/login/
+- `ObtainAuthToken`
+
