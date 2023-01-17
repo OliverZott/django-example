@@ -65,6 +65,13 @@ Register custom user model to django admin-site, create superuser via CLI and us
 
 ## API endpoints
 
+1. Model + Migration
+    - `python .\manage.py makemigrations`
+    - `python .\manage.py migrate`
+1. Serializer
+1. View (ViewSet or ApiView)
+1. Urls
+
 ### API Views
 
 - `views.py` and `urls.py`
