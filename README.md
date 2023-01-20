@@ -1,5 +1,7 @@
 # Django Example Project
 
+[Course](https://www.udemy.com/course/django-python/learn/lecture/6954788#overview)
+
 ## Setup Django
 
 Create Project and test server [Link](https://docs.djangoproject.com/en/4.1/intro/tutorial01/#creating-a-project)
